@@ -1,7 +1,9 @@
 package Modul_1;
 
+import java.util.ArrayList;
+
 public class rekening {
-	
+
 	String nomorRekening;
 	String namaPemilik;
 	double saldo;
@@ -9,8 +11,21 @@ public class rekening {
 	public rekening(String nomor, String nama, double saldoAwal) {
 		nomorRekening = nomor;
 		namaPemilik = nama;
-		saldo = saldoAwal;
+		saldo = saldoAwal;	
 		System.out.println("Rekening atas nama : " + namaPemilik + " Berhasil dibuat dengan saldo Rp" + saldo);
+	}
+	
+	public String getNoRek() {return nomorRekening;}
+	public String getNama() {return namaPemilik;}
+		
+	public rekening gantiAkun(ArrayList<rekening> daftar, int index) {
+		if (index >= 0 && index < daftar.size()) {
+            System.out.println("Berhasil pindah ke akun: " + daftar.get(index).getNama());
+            return daftar.get(index);
+        } else {
+            System.out.println("Gagal: akun tidak ditemukan!");
+            return null;
+        }
 	}
 	
 	public void setorTunai(double nominal) {
