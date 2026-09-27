@@ -115,7 +115,7 @@ public class rekening {
 		if(PIN.equals(pinLama)) {
 			System.out.println("PIN sudah di pernah di pake!");
 		} else {
-			this.pinbaru = PIN;
+			this.pinbaru = PIN; // pin diubah menggunakan pin baru
 		}
 	}
 
