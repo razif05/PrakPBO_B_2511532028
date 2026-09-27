@@ -34,6 +34,7 @@ public class rekening {
 	
 	public String getNoRek() {return nomorRekening;}
 	public String getNama() {return namaPemilik;}
+	public double getNominal() {return saldo;}
 		
 	public rekening gantiAkun(ArrayList<rekening> daftar, int index) {
 		if (index >= 0 && index < daftar.size()) {
