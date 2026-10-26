@@ -10,10 +10,7 @@ public class RekeningGiro extends rekening{
 	
 	@Override
 	public boolean tarikTunai(double nominal) {
-		if(saldo <= 10000) {
-			System.out.println("Gagal: saldo harus lebih dari 10000!");
-			return false;
-		} else if(nominal <= 0) {
+		if(nominal <= 0) {
 			System.out.println("Gagal: nominal harus lebih dari 0!");
 			return false;
 		} else if(nominal > (saldo + batasOverdraft)) {
